@@ -1,0 +1,102 @@
+section{
+    display: inline-block;
+    margin: 40px 50px;
+    font-size: large;
+    padding: 35px 0px;
+}
+section h3{
+    font-size: 40px;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    text-align: center;
+}
+section li {
+    padding-bottom: 5px;
+}
+section li:last-child{
+    font-weight: bolder;
+    padding-top: 15px;
+   
+}
+body{
+    font-family:cursive;
+    background-color: white;
+}
+header{
+    background-color:rgb(246 212 152);
+    
+    border-bottom:4px solid rgb(114 49 33);
+    height: 120px;
+   
+}
+.logo{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 30px;
+ }
+ .navbar{
+   display: inline-block;
+   float: right;
+   margin-top:0px ;
+   margin-right: 20px;
+   height: 120px;
+   line-height: 60px;
+   
+ }
+ 
+ .navitem {
+   display: inline-block;
+   margin:22px 10px;
+ 
+ }
+ .navlink:hover{
+     color: white;
+ }
+ .navlink {
+    text-decoration: none;
+    color: rgb(114 49 33);
+    font-size: 30px;
+    font-weight: 800;
+ }
+
+
+main {
+     justify-content: center;
+   
+}
+.par_main , .h4_main{
+    margin: 10px 70px;
+    justify-content: center;
+    font-size: larger;
+    color:  rgb(114 49 33);
+
+}
+.h4_main{
+    color: brown;
+}
+.img_view{
+    margin-left: 200px;
+}
+.img{
+display: inline-block;
+margin: 30px;
+
+}
+footer{
+    margin-bottom: 0%;
+    height: 40px;
+    background-color:rgb(114 49 33);
+    color:  white;
+    line-height: 20px;
+}
+
+#copyright{
+    display: inline-block;
+    margin: 10px 550px;
+}
+#date{
+    display: inline-block;
+    float: right;
+    margin: 10px;
+
+}
