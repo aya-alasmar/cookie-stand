@@ -71,11 +71,12 @@ function header(){
 
 }
 
-function footerSection() {
+function footerSection(){
     var totalRow = document.createElement('tr');
     var footerCell = document.createElement('th');
     footerCell.textContent = 'Totals';
     totalRow.appendChild(footerCell);
+    
     var sum;
     for (var i = 0; i <= hours.length; i++) {
         var footerCell = document.createElement('th');
