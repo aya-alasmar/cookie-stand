@@ -54,7 +54,24 @@ function calCustPerHour(maxCustPerHour,minCustPerHour) {
      return customerNum;
 }
 
-function footerSection(table) {
+function header(){
+    var headers =document.createElement('tr');
+    table.appendChild(headers);
+    var headEmpty=document.createElement('th');
+    headers.appendChild(headEmpty);
+    headEmpty.textContent=' ';
+    for(var i=0;i<hours.length;i++){
+        var headData=document.createElement('th');
+        headers.appendChild(headData);
+        headData.textContent=hours[i];
+    }
+    var headDataTotal=document.createElement('th');
+    headers.appendChild(headDataTotal);
+    headDataTotal.textContent=" Daily Location Total";
+
+}
+
+function footerSection() {
     var totalRow = document.createElement('tr');
     var footerCell = document.createElement('th');
     footerCell.textContent = 'Totals';
@@ -110,26 +127,12 @@ Lima.calCookies(4.6,Lima.custPerHour);
 var locations=[Seattle,Tokyo,Dubai,Paris,Lima];
 
 
-
 var body = document.getElementById("salesBody");
 var table = document.createElement('table');
 body.appendChild(table);
-var headers =document.createElement('tr');
-table.appendChild(headers);
-var headEmpty=document.createElement('th');
-headers.appendChild(headEmpty);
-headEmpty.textContent=' ';
-for(var i=0;i<hours.length;i++){
-    var headData=document.createElement('th');
-    headers.appendChild(headData);
-    headData.textContent=hours[i];
-}
-var headDataTotal=document.createElement('th');
-headers.appendChild(headDataTotal);
-headDataTotal.textContent=" Daily Location Total";
 
 
-
+header();
 
 Seattle.render();
 Tokyo.render();
@@ -138,4 +141,4 @@ Paris.render();
 Lima.render();
 
 
-footerSection(table);
+footerSection();
