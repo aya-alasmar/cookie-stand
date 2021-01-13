@@ -12,6 +12,8 @@ function Branch(branchName,maxCust,minCust,avgCookie) {
     this.totalCookies = 0;
 }
 
+
+
 Branch.prototype.calCust= function (maxCustPerHour, minCustPerHour) {
     this.custPerHour = calCustPerHour(maxCustPerHour, minCustPerHour);
 
@@ -133,13 +135,45 @@ var table = document.createElement('table');
 body.appendChild(table);
 
 
+
+var form = document.getElementById('createLocationForm');
+console.log(form);
+form.addEventListener('submit', getValue);
+
+function getValue(event) {
+    event.preventDefault();
+    var name = event.target.locationName.value;
+    var minCust = Number(event.target.minCust.value);
+    var maxCust = Number(event.target.maxCust.value);
+    var avgCookie = Number(event.target.avgCookie.value);
+    console.log(name, maxCust, minCust, avgCookie);
+
+
+    var newLocation = new Branch(name, maxCust, minCust, avgCookie);
+    newLocation.calCust(maxCust, minCust);
+    newLocation.calCookies(avgCookie, newLocation.custPerHour);
+    locations.push(newLocation);
+
+    table.innerHTML=' ';
+    event.target.locationName.value='';
+    event.target.maxCust.value = '';
+    event.target.minCust.value='';
+    event.target.avgCookie.value='';
+    
+   
+    header();
+    for(var i=0;i<locations.length;i++){
+        locations[i].render();
+    }
+
+    footerSection();
+
+}
+
+
+
 header();
-
-Seattle.render();
-Tokyo.render();
-Dubai.render();
-Paris.render();
-Lima.render();
-
-
+for(var i=0;i<locations.length;i++){
+    locations[i].render();
+}
 footerSection();
