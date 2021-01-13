@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Hachi+Maru+Pop&family=Handlee&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Hachi+Maru+Pop&family=Handlee&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body id="salesBody">
     <header>
         <nav class="social-bar">
@@ -44,10 +48,10 @@
                                 width="10" height="10"> Home</a></li>
                     <li class="navitem d-inline-block"><a href="sales.html" class="navlink"> <img src="img\arrow.png"
                                 width="10" height="10"> Sales</a></li>
-                    <li class="navitem d-inline-block"><a href="index.html" class="navlink"> <img src="img\arrow.png" width="10"
-                                height="10">Products</a></li>
-                    <li class="navitem d-inline-block"><a href="#footer-grid" class="navlink"> <img src="img\arrow.png" width="10"
-                                height="10"> About us</a></li>
+                    <li class="navitem d-inline-block"><a href="index.html" class="navlink"> <img src="img\arrow.png"
+                                width="10" height="10">Products</a></li>
+                    <li class="navitem d-inline-block"><a href="#footer-grid" class="navlink"> <img src="img\arrow.png"
+                                width="10" height="10"> About us</a></li>
                 </ul>
             </nav>
             <span class="search-bar d-inline-block">
@@ -55,18 +59,37 @@
             </span>
         </div>
     </header>
-    <script src="js/app.js"></script>
+    <main>
+
+      
+        <form id="createLocationForm">
+            <fieldset>
+                <legend>Create New Location </legend>
+                <label>Location Name : </label> <input type="text" pattern="[-a-zA-Z]*" id="locationName" class='input'required placeholder="please enter letters only"><br><br>
+                <label>Max No of Customer Per Hour : </label> <input type="number" step="0.0001" min="0" id="maxCust" class="input" placeholder="please enter numbers only"required><br><br>
+                <label>Min No of Customer Per Hour : </label> <input type="number" step="0.0001" min="0" id="minCust" class="input" placeholder="please enter numbers only" required><br><br>
+                <label>Avg Cookies : </label> <input type="number" id="avgCookie" step="0.0001" min="0" class="input" placeholder="please enter numbers only" required><br><br>
+                <button type="submit" id="submit" class="btn" >Create</button>
+
+            </fieldset>
+        </form>
+       
+    </main>
+   
+        <script src="js/app.js"></script>
+
+
     <footer>
         <div class="footer-grid">
             <h3>
                 Other Pages
             </h3>
             <div>
-            <a href="index.html" class="pages">HOME</a>
-            <a href="sales.html" class="pages"> Sales</a>
-            <a href="index.html" class="pages">Products </a>
-            <a href="index.html" class="pages">Contact Us</a>
-          
+                <a href="index.html" class="pages">HOME</a>
+                <a href="sales.html" class="pages"> Sales</a>
+                <a href="index.html" class="pages">Products </a>
+                <a href="index.html" class="pages">Contact Us</a>
+
             </div>
 
         </div>
@@ -77,10 +100,10 @@
             <span>Email : Cookies.salmon@gmail.com</span>
             <span>Phone NO : 07888888</span>
             <div>
-            <a href=""> <img src="img/facebook.png" width="35" height="35"></a>
-            <a href=""> <img src="img/twitter.png" width="35" height="35"></a>
-            <a href=""> <img src="img/google.png" width="35" height="40"></a>
-            <a href=""> <img src="img/youtube.png" width="35" height="35"></a>
+                <a href=""> <img src="img/facebook.png" width="35" height="35"></a>
+                <a href=""> <img src="img/twitter.png" width="35" height="35"></a>
+                <a href=""> <img src="img/google.png" width="35" height="40"></a>
+                <a href=""> <img src="img/youtube.png" width="35" height="35"></a>
             </div>
 
         </div>
@@ -90,5 +113,7 @@
         </div>
         <h4 id="copyright"> &copy;2021 Salmon Cookies Inc. All rights reserved. Privacy Policy</h4>
     </footer>
+
 </body>
+
 </html>
