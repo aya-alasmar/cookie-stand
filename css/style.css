@@ -4,6 +4,9 @@ section{
     font-size: large;
     padding: 35px 0px;
 }
+header{
+    font-family: 'Roboto Slab', serif;
+}
 section h3{
     font-size: 40px;
     font-weight: bolder;
@@ -19,7 +22,7 @@ section li:last-child{
    
 }
 body{
-    background-color: white;
+    background-color:rgb(255,255,253);
     font-weight: 900;
     font-family: Calibri;
 }
@@ -266,10 +269,11 @@ table th{
 	margin-right: 50px;
 	margin-bottom: 70px;
 }
-.feature-section #article h3{
+ #article h3{
 	margin-top: 0px;
-	font-weight: 600;
-	font-size: 43px;
+	
+    font-size: 33px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color:rgb(111, 197, 111);
     margin-bottom: 0px;
   
